@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "PaymentService";
+
+package payment;
+
+
+service PaymentGrpc {
+  rpc DeductBalance (DeductBalanceRequest) returns (DeductBalanceResponse);
+}
+
+
+message DeductBalanceRequest {
+  int32 user_id = 1;
+  double amount = 2; 
+}
+
+message DeductBalanceResponse {
+  bool is_success = 1;
+  string message = 2;
+}
