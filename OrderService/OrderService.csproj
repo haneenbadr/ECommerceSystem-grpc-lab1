@@ -14,11 +14,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.64.0" />
+    <PackageReference Include="Grpc.AspNetCore.Web" Version="2.64.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="..\InventoryService\Protos\inventory.proto" GrpcServices="Client" />
     <Protobuf Include="..\PaymentService\Protos\payment.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\order.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>
